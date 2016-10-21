@@ -158,9 +158,13 @@
     'prefix': 'dump'
     'body': 'var_dump($1);$0'
   'PHPDoc public function …':
-    'prefix': 'pubf'
-    'body': '/**\n * ${6:undocumented function summary}\n *\n * @param ${8:type} ${9:var} ${10:Description}\n * @return ${11:return Type}\n */\n${1:public }function ${2:FunctionName}(${3:$${4:value}${5:=\'\'}})\n{\n\t${0:# code...}\n}'
+    'prefix': 'phpdoc'
+    'body': '/**\n * ${6:undocumented function summary}\n *\n * @param ${8:type} ${9:var} ${10:Description}\n * @return ${11:return Type}\n */\n'
 
-  'PHPDoc private function …':
+  'public function …':
+    'prefix': 'pubf'
+    'body': '${1:public }function ${2:FunctionName}(${3:$${4:value}${5:=\'\'}})\n{\n\t${0:# code...}\n}'
+
+  'private function …':
     'prefix': 'prif'
-    'body': '/**\n * ${6:undocumented function summary}\n *\n * @param ${8:type} ${9:var} ${10:Description}\n * @return ${11:return Type}\n */\n${1:public }function ${2:FunctionName}(${3:$${4:value}${5:=\'\'}})\n{\n\t${0:# code...}\n}'
+    'body': '${1:private }function ${2:FunctionName}(${3:$${4:value}${5:=\'\'}})\n{\n\t${0:# code...}\n}'
